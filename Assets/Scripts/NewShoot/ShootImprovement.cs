@@ -30,9 +30,8 @@ public class ShootImprovement : MonoBehaviour
         Vector3 fireDirection = (newPosition - currentPosition).normalized;
         float fireDistance = Vector3.Distance(newPosition, currentPosition);
 
-        RaycastHit hit;
 
-        if (Physics.Raycast(currentPosition, fireDirection, out hit, fireDistance))
+        if (Physics.Raycast(currentPosition, fireDirection, out RaycastHit hit, fireDistance))
         {
             if (hit.collider.CompareTag("Target"))
             {

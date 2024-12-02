@@ -29,8 +29,7 @@ public class SimpleShoot : MonoBehaviour
 
     void Start()
     {
-        if (player == null)
-            player = new HapticClipPlayer(clip1);
+        player ??= new HapticClipPlayer(clip1);
 
         if (barrelLocation == null)
             barrelLocation = transform;
@@ -50,13 +49,13 @@ public class SimpleShoot : MonoBehaviour
                 //gunAnimator.SetTrigger("Fire");
                 Shoot();
                 CasingRelease();
-                StartCoroutine(VibrateForSeconds(0.5f, 1f, 0.3f, OVRInput.Controller.RTouch));
+                StartCoroutine(VibrateForSeconds(0.5f, OVRInput.Controller.RTouch));
 
             }
         }
     }
 
-    IEnumerator VibrateForSeconds(float duration, float frequency, float amplitude, OVRInput.Controller controller)
+    IEnumerator VibrateForSeconds(float duration, OVRInput.Controller controller)
     {
         //OVRInput.SetControllerVibration(frequency, amplitude, controller);
         PlayHapticClip1();
