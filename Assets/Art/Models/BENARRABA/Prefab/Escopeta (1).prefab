@@ -379,13 +379,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactorFilters: []
-  _maxInteractors: -1
+  _maxInteractors: 1
   _maxSelectingInteractors: 1
   _data: {fileID: 0}
   _pointableElement: {fileID: 6735205994719616833}
   _rigidbody: {fileID: 1926260790845821051}
   _physicsGrabbable: {fileID: 0}
-  _resetGrabOnGrabsUpdated: 1
+  _resetGrabOnGrabsUpdated: 0
   _scoringModifier:
     _positionRotationWeight: 0.8
   _slippiness: 0
@@ -547,13 +547,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactorFilters: []
-  _maxInteractors: -1
+  _maxInteractors: 1
   _maxSelectingInteractors: 1
   _data: {fileID: 0}
   _pointableElement: {fileID: 6735205994719616833}
   _rigidbody: {fileID: 1926260790845821051}
   _physicsGrabbable: {fileID: 0}
-  _resetGrabOnGrabsUpdated: 1
+  _resetGrabOnGrabsUpdated: 0
   _scoringModifier:
     _positionRotationWeight: 0.8
   _slippiness: 0
@@ -770,7 +770,7 @@ Transform:
   m_GameObject: {fileID: 3555837551534427982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.211, y: -0.759, z: -2.748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -790,13 +790,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactorFilters: []
-  _maxInteractors: -1
+  _maxInteractors: 1
   _maxSelectingInteractors: 1
   _data: {fileID: 0}
   _pointableElement: {fileID: 6735205994719616833}
   _rigidbody: {fileID: 1926260790845821051}
   _physicsGrabbable: {fileID: 0}
-  _resetGrabOnGrabsUpdated: 1
+  _resetGrabOnGrabsUpdated: 0
   _scoringModifier:
     _positionRotationWeight: 0.8
   _slippiness: 0
@@ -1006,6 +1006,9 @@ GameObject:
   - component: {fileID: 8910729194891112158}
   - component: {fileID: 1603264961975903287}
   - component: {fileID: 4204188360872368001}
+  - component: {fileID: 696412311503218463}
+  - component: {fileID: 8484187432565065374}
+  - component: {fileID: 1294521691129684952}
   m_Layer: 0
   m_Name: Escopeta (1)
   m_TagString: Untagged
@@ -1077,7 +1080,7 @@ MonoBehaviour:
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
   _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 696412311503218463}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
   _rigidbody: {fileID: 1926260790845821051}
@@ -1163,6 +1166,104 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _sleepFrames: 5
+--- !u!114 &696412311503218463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522691888722702142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb7085c111fcb44493d57d4e336d3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionConstraints:
+    ConstraintsAreRelative: 0
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  _rotationConstraints:
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  _scaleConstraints:
+    ConstraintsAreRelative: 1
+    XAxis:
+      ConstrainAxis: 1
+      AxisRange:
+        Min: 1
+        Max: 1
+    YAxis:
+      ConstrainAxis: 1
+      AxisRange:
+        Min: 1
+        Max: 1
+    ZAxis:
+      ConstrainAxis: 1
+      AxisRange:
+        Min: 1
+        Max: 1
+--- !u!114 &8484187432565065374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522691888722702142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc57d94f170988441a3a5f53a05ca948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactables:
+  - {fileID: 8704591376141364818}
+  - {fileID: 3073760827147179275}
+  _maxInteractors: 1
+  _maxSelectingInteractors: 1
+  _data: {fileID: 0}
+--- !u!114 &1294521691129684952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522691888722702142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc57d94f170988441a3a5f53a05ca948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactables:
+  - {fileID: 1533611586944051540}
+  - {fileID: 4064470207319865656}
+  _maxInteractors: 1
+  _maxSelectingInteractors: 1
+  _data: {fileID: 0}
 --- !u!1 &6174057054658788637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,8 +1357,8 @@ Transform:
   m_GameObject: {fileID: 6731893387317614435}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5047303, y: -0.28312725, z: 0.6955072, w: -0.4258591}
-  m_LocalPosition: {x: 0.16808452, y: -0.802, z: -2.698}
-  m_LocalScale: {x: 9.191841, y: 9.191841, z: 9.191841}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 9.191841, y: 9.191841, z: 9.191839}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3983160409262399102}
@@ -1402,13 +1503,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactorFilters: []
-  _maxInteractors: -1
+  _maxInteractors: 1
   _maxSelectingInteractors: 1
   _data: {fileID: 0}
   _pointableElement: {fileID: 6735205994719616833}
   _rigidbody: {fileID: 1926260790845821051}
   _physicsGrabbable: {fileID: 0}
-  _resetGrabOnGrabsUpdated: 1
+  _resetGrabOnGrabsUpdated: 0
   _scoringModifier:
     _positionRotationWeight: 0.8
   _slippiness: 0
@@ -1431,6 +1532,7 @@ MonoBehaviour:
   _handAligment: 1
   _handGrabPoses:
   - {fileID: 6255615806828693334}
+  - {fileID: 3267196997839763463}
 --- !u!114 &636445714457753146
 MonoBehaviour:
   m_ObjectHideFlags: 0
