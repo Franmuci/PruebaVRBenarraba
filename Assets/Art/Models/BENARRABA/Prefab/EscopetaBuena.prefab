@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 8484187432565065374}
   - component: {fileID: 1294521691129684952}
   m_Layer: 0
-  m_Name: Escopeta (1)
+  m_Name: EscopetaBuena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   _transferOnSecondSelection: 0
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
+  _oneGrabTransformer: {fileID: 696412311503218463}
   _twoGrabTransformer: {fileID: 696412311503218463}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
