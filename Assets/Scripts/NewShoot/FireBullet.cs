@@ -102,6 +102,7 @@ public class FireBullets : MonoBehaviour, IHandGrabUseDelegate
 
     public float ComputeUseStrength(float strength)
     {
+        print(strength);
         if(strength > 0.6f && _canFire)
         {
             FireBullet();
