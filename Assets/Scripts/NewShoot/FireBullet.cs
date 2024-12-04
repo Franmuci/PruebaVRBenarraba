@@ -1,9 +1,10 @@
 using Oculus.Haptics;
+using Oculus.Interaction.HandGrab;
 using System.Collections;
 using UnityEngine;
 
 
-public class FireBullets : MonoBehaviour
+public class FireBullets : MonoBehaviour, IHandGrabUseDelegate
 {
     public GameObject bulletObj;
     public Transform bulletSpawn;
@@ -19,6 +20,8 @@ public class FireBullets : MonoBehaviour
     public GameObject casingPrefab;
     [SerializeField] private Transform casingExitLocation;
 
+    private bool _canFire = true;
+
     [Header("Settings")]
     [Tooltip("Specify time to destory the casing object")][SerializeField] private float destroyTimer = 2f;
     [Tooltip("Casing Ejection Speed")][SerializeField] private float ejectPower = 150f;
@@ -27,19 +30,6 @@ public class FireBullets : MonoBehaviour
     private void Start()
     {
         player ??= new HapticClipPlayer(clip1);
-    }
-
-    void Update()
-    {
-        if (OVRInput.Get(OVRInput.Button.SecondaryHandTrigger))
-        {
-            if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
-            {
-                FireBullet();
-                CasingRelease();
-                StartCoroutine(VibrateForSeconds(0.5f));
-            }
-        }
     }
 
     public void FireBullet()
@@ -100,4 +90,30 @@ public class FireBullets : MonoBehaviour
         Destroy(tempCasing, destroyTimer);
     }
 
+    public void BeginUse()
+    {
+       
+    }
+
+    public void EndUse()
+    {
+        
+    }
+
+    public float ComputeUseStrength(float strength)
+    {
+        if(strength > 0.6f && _canFire)
+        {
+            FireBullet();
+            CasingRelease();
+            StartCoroutine(VibrateForSeconds(0.5f));
+            _canFire = false;
+        }
+        else if (strength < 0.6f && !_canFire)
+        {
+            _canFire = true;
+        }
+        
+        return strength;
+    }
 }
