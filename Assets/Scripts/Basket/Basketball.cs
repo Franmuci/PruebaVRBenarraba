@@ -15,7 +15,7 @@ public class Basketball : MonoBehaviour
 
     private void Movimiento()
     {
-        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * 2, ForceMode.Impulse);
+        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward , ForceMode.Impulse);
 
     }
 }
