@@ -112,7 +112,7 @@ MonoBehaviour:
   _usesHandPose: 1
   _handPose:
     _handedness: 0
-    _fingersFreedom: 0200000002000000010000000100000001000000
+    _fingersFreedom: 0200000001000000010000000100000001000000
     _jointRotations:
     - {x: -0.3753869, y: 0.4245841, z: -0.007778856, w: -0.8238644}
     - {x: -0.2602303, y: 0.02433088, z: 0.125678, w: -0.9570231}
@@ -1380,7 +1380,7 @@ MonoBehaviour:
   _usesHandPose: 1
   _handPose:
     _handedness: 1
-    _fingersFreedom: 0200000002000000010000000100000001000000
+    _fingersFreedom: 0200000001000000010000000100000001000000
     _jointRotations:
     - {x: -0.375387, y: 0.42458412, z: -0.0077788336, w: -0.8238645}
     - {x: -0.26023033, y: 0.024330914, z: 0.12567803, w: -0.9570232}
