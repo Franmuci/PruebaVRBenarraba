@@ -24,7 +24,8 @@ MonoBehaviour:
   bodyTrackingSupport: 0
   faceTrackingSupport: 0
   eyeTrackingSupport: 0
-  virtualKeyboardSupport: 1
+  virtualKeyboardSupport: 0
+  colocationSessionSupport: 0
   sceneSupport: 0
   boundaryVisibilitySupport: 0
   disableBackups: 1
@@ -32,8 +33,9 @@ MonoBehaviour:
   securityXmlPath: 
   skipUnneededShaders: 0
   enableIL2CPPLTO: 0
+  removeGradleManifest: 1
   focusAware: 1
-  requiresSystemKeyboard: 0
+  requiresSystemKeyboard: 1
   experimentalFeaturesEnabled: 0
   insightPassthroughEnabled: 0
   _insightPassthroughSupport: 1

@@ -6,6 +6,8 @@ public class ShootImprovement : MonoBehaviour
     public Vector3 currentPosition;
     public Vector3 currentVelocity;
 
+    public GameObject destroyedVersion;
+
     Vector3 newPosition = Vector3.zero;
     Vector3 newVelocity = Vector3.zero;
 
@@ -36,8 +38,16 @@ public class ShootImprovement : MonoBehaviour
             if (hit.collider.CompareTag("Target"))
             {
                 Debug.Log("Hit target!");
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                //Destroy(hit.collider.gameObject);
+
+                GameObject jarronRoto = Instantiate(destroyedVersion, hit.collider.transform.position, hit.collider.transform.rotation);
                 Destroy(hit.collider.gameObject);
+                Destroy(gameObject);
+                Destroy(jarronRoto, 1f);
+                
+
+
             }
         }
     }
